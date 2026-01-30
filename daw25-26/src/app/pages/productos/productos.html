@@ -1,1 +1,24 @@
-<p>productos works!</p>
+<div class="container">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  
+  <main>
+    <div class="producto">
+      <h2>{{nombreProducto}}</h2>
+      
+      <div class="info">
+        <p><strong>Descripción:</strong> {{descripcion}}</p>
+        <p><strong>Precio (sin IVA):</strong> {{precio}}€</p>
+        <p><strong>Precio (con IVA):</strong> {{calcularPrecioConIVA()}}€</p>
+        <p><strong>Unidades disponibles:</strong> {{stock}}</p>
+        <p><strong>Estado:</strong> {{obtenerEstadoStock()}}</p>
+        <p><strong>Disponible para compra:</strong> {{disponible ? 'Sí' : 'No'}}</p>
+      </div>
+      
+      <div class="precio-total">
+        <p>Total con IVA: {{calcularPrecioConIVA().toFixed(2)}}€</p>
+      </div>
+    </div>
+  </main>
+</div>
