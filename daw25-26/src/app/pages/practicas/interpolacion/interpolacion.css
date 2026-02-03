@@ -1,0 +1,21 @@
+.imagen-ejemplo {
+  width: 100px;
+  height: 50px;
+  max-width: 100%; 
+  height: auto;
+  display: block;
+
+}
+.container, .contador{
+display: flex;
+align-items: center;
+/* margin:100px; */
+padding: 20px;
+
+}
+.boton {
+    border-radius: 15px;
+    width: 50px;
+    background-color:black;
+    color: white;
+}
