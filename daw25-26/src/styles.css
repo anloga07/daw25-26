@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+img {
+    width: 100%;
+
+}
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Layout: ensure footer is placed after content and at bottom when page is short */
+html, body, app-root {
+    height: 100%;
+}
+app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1 0 auto; /* allow main to grow and push footer down */
+    min-height: 0;
+}
+
+/* Ensure footer participates in normal flow (not fixed) */
+footer {
+    position: static;
+}
