@@ -1,0 +1,77 @@
+<!--<div class="container">
+  <header>
+    <h1>{{title}}</h1>
+  </header>
+  
+  <main>
+     <div class="producto">   CASO PRACTICO PRODUCTOS 1
+      <h2>{{nombreProducto}}</h2>
+      
+      <div class="info">
+        <p><strong>Descripción:</strong> {{descripcion}}</p>
+        <p><strong>Precio (sin IVA):</strong> {{precio}}€</p>
+        <p><strong>Precio (con IVA):</strong> {{calcularPrecioConIVA()}}€</p>
+        <p><strong>Unidades disponibles:</strong> {{stock}}</p>
+        <p><strong>Estado:</strong> {{obtenerEstadoStock()}}</p>
+        <p><strong>Disponible para compra:</strong> {{disponible ? 'Sí' : 'No'}}</p>
+      </div>
+      
+      <div class="precio-total">
+        <p>Total con IVA: {{calcularPrecioConIVA().toFixed(2)}}€</p>
+      </div>
+    </div>
+  </main> 
+</div>-->
+<div class="container">
+  <header>
+    <h1>{{title}}</h1>
+    <p class="empresa-info">
+      {{empresa.nombre}} - CIF: {{empresa.cif}} | 
+      Tel: {{empresa.telefono}} | 
+      Email: {{empresa.email}}
+    </p>
+  </header>
+  
+  <div class="page-main">
+   @for (item of producto; track item.id) {
+  
+    <article class="producto-detalle">
+      <div class="producto-header">
+        <h2>{{item.nombre}}</h2>
+        <span class="categoria">{{item.categoria}}</span>
+      </div>
+      
+      <div class="producto-info">
+        <p><strong>ID:</strong> {{item.id}}</p>
+        <p><strong>Marca:</strong> {{item.marca}}</p>
+        <p><strong>Precio:</strong> {{item.precio}}€</p>
+        <p><strong>Lanzamiento:</strong> {{formatearFecha(item.fechaLanzamiento)}}</p>
+        <p><strong>Años en el mercado:</strong> {{obtenerAnosEnMercado()}}</p>
+      </div>
+      
+      <div class="caracteristicas">
+        <h3>Características técnicas</h3>
+        <p>Procesador: {{item.caracteristicas[1].valor}}</p>
+        <p>Pantalla: {{item.caracteristicas[0].valor}}</p>
+        <p>Cámara: {{item.caracteristicas[2].valor}}</p>
+        <p>Almacenamiento: {{item.caracteristicas[3].valor}}</p>
+      </div>
+      
+      <div class="resumen">
+        <p>El {{item.nombre}} de {{item.marca}} se lanzó el {{formatearFecha(item.fechaLanzamiento)}} 
+        y actualmente tiene un precio de {{item.precio}}€.</p>
+      </div>
+    </article>
+  }@empty {
+  No hay elementos para mostrar
+}
+
+  </div>
+</div>
+
+
+
+
+
+
+

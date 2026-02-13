@@ -1,0 +1,83 @@
+<main>
+    
+<div class="container">
+<div>   
+<h2>Angular Material funcionando</h2> 
+ <br>
+<button class="boton" mat-raised-button color="primary">Botón Primario</button>
+<button class="boton" mat-raised-button color="accent">Botón Acento</button>
+<button class="boton" mat-raised-button color="warn">Botón Advertencia</button>
+ <br>
+ <br>
+<mat-card>
+<mat-card-title>Tarjeta de ejemplo</mat-card-title>
+<mat-card-content>
+Esta es una tarjeta básica de Angular Material.
+ <img src="https://picsum.photos/id/24/4855/1803" alt="Imagen de ejemplo"  >
+</mat-card-content>
+<mat-card-actions>
+<button mat-button>Acción 1</button>
+<button mat-button>Acción 2</button>
+</mat-card-actions>
+</mat-card>
+<br><br>
+<mat-card>
+<mat-card-title>Formulario de registro</mat-card-title>
+<mat-form-field appearance="outline">
+<mat-label>Nombre</mat-label>
+<input matInput placeholder="Introduce tu nombre">
+</mat-form-field>
+<mat-form-field appearance="outline">
+<mat-label>Email</mat-label>
+<input matInput type="email" placeholder="Introduce tu email">
+</mat-form-field>
+<button mat-raised-button color="primary">Enviar</button>
+</mat-card>
+<br><br>
+<mat-card>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<ng-container matColumnDef="nombre">
+<th mat-header-cell *matHeaderCellDef> Nombre </th>
+<td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+</ng-container>
+<ng-container matColumnDef="nota">
+<th mat-header-cell *matHeaderCellDef> Nota </th>
+<td mat-cell *matCellDef="let element"> {{element.nota}} </td>
+</ng-container>
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+</mat-card>
+  
+</div> 
+
+<div class="mt-5" style="margin: 100px;">  <!-- AQUÍ EMPIEZA BOOTSTRAP -->
+  <h2 class="text-primary text-center">
+    Bootstrap funcionando en Angular 
+  </h2>
+  
+  <div class="card mt-4 shadow">
+    <div class="card-body">
+      <p class="card-text">
+        Si ves este contenido con estilos, Bootstrap está correctamente instalado.
+      </p>
+      <button class="btn btn-success">
+        Botón Bootstrap
+      </button>
+      <button class="btn btn-primary">
+        Botón Bootstrap
+      </button>
+      <button class="btn btn-warning">
+        Botón Bootstrap
+      </button>
+      
+    </div>
+      
+  </div>
+</div>
+</div>
+
+
+
+</main>
+

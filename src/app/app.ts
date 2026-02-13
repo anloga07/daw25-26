@@ -1,0 +1,20 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Header } from './components/header/header';
+import { Footer } from './components/footer/footer';
+import { Productos } from './pages/productos/productos';
+
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet,Header,Footer],
+  templateUrl: './app.html',
+  styleUrls: ['./app.css']
+})
+export class App {
+  protected readonly title = signal('daw25-26'); 
+  //title="Proyecto uno"
+
+
+}

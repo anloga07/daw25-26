@@ -1,0 +1,36 @@
+<main class="container">
+  <header>
+    <h1>{{title}}</h1>
+    <p class="total-productos">Mostrando {{place().length}} libros</p>
+  </header>
+  
+  <section class="catalogo">
+    @for (producto of place(); track producto.postId) {
+      <article class="producto-item">
+        <div class="producto-imagen">
+          {{producto.postId}}
+        </div>
+        
+        <div class="producto-info">
+          <span class="categoria">{{producto.postId}}</span>
+          <h3>{{producto.name}}</h3>
+
+          <div class="producto-footer">
+            <p class="precio">{{producto.email}}</p>
+          </div>
+
+          <div class="producto-meta">
+            <small>
+              {{producto.body}}
+            </small>
+          </div>
+        </div>
+      </article>
+    } @empty {
+      <div class="sin-productos">
+        <h2>No hay productos disponibles</h2>
+        <p>Vuelve más tarde para ver nuestro catálogo</p>
+      </div>
+    }
+  </section>
+</main>

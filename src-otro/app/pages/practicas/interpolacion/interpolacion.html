@@ -1,0 +1,29 @@
+<div class="container">
+    <div>
+<h2>Interpolación</h2>
+<p>Hola, {{ nombre }} </p>
+<br>
+<h2>Property Binding</h2>
+<button [disabled]="isDisabled">
+Botón deshabilitado
+</button>
+<br><br>
+<div>
+    <img [src]="imagenUrl" alt="Imagen de ejemplo" alt="Imagen de ejemplo" class="imagen-ejemplo">
+</div>
+
+<h2>Event Binding</h2>
+<div class="contador">
+<p>Contador con signal: </p>
+<button class="boton" (click)="decrementar()">-</button>
+<p>- {{ contador() }}      -</p>
+<button class="boton" (click)="incrementar()">+</button>
+</div>
+
+
+<h2>Two-way Binding</h2>
+<input type="text" [(ngModel)]="mensaje" placeholder="Escribe algo">
+<p>Mensaje escrito: {{ mensaje }}</p>
+    </div>
+
+</div>

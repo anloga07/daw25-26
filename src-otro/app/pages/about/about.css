@@ -1,0 +1,21 @@
+main{
+    height: 150vh;
+/*     align-content: center; 
+    padding: 20px 100px;*/
+}
+mat-card{
+    width: 500px;
+
+}
+table{
+    width: 200px;
+
+}
+.container  {
+display: flex;
+align-items: center;
+ 
+}
+.boton {
+    margin: 5px ;
+}

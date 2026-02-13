@@ -1,0 +1,63 @@
+<header>
+   <!--  <nav>
+ -->
+        <!-- Con href, lo que conseguimos es recarbar las páginas
+         per, Angular ofrece ontro mecanismo para que sea reactivo,
+         para que no recargue las páginas, sino que reaccione y muestre
+         el componente -->
+       <!--  <a href="/">Inicio  </a> -->  <!-- Comprobar como se recarga la página, observe la pestaña con el título -->
+      <!--   <a href="/nosotros">Nosotros  </a>
+        <a href="/productos">Productos  </a>
+        <a href="/contacto">Contacto  </a>  --> 
+<!-- Para eso usamos "routerLink" -->
+  <!--  <a routerLink="/">Inicio  </a> 
+     <a routerLink="/amaterial">A.Material  </a>
+        <a routerLink="/moviles">Móviles  </a>                 
+        <a routerLink="/informatica">Informática</a>        
+        <a routerLink="/contacto">Contacto  </a>
+        <a routerLink="/ruta_erronea">Erronea  </a> 
+        <a routerLink="/practicas">Prácticas  </a> 
+
+    </nav> -->
+
+    <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary " data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Inicio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/amaterial">Bootstrap-A.Material</a>
+        </li>
+       
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/moviles">Móviles</a></li>
+            <li><a class="dropdown-item" routerLink="/informatica">Informática</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/placeholder">Leer api placeholder</a></li>
+          </ul>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" routerLink="/contacto">Contacto</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" routerLink="/practicas">Interpolación</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/ruta_erronea">Erronea</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+</header>

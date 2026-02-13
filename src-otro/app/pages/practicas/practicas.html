@@ -1,0 +1,24 @@
+<main class="container">
+    <div>
+    <h5> Estamos en la plantilla "practicas"</h5>
+    <h5> y recibimos el componente "app-interpolacion"</h5>
+    <app-interpolacion></app-interpolacion>
+    </div>
+    
+    <div class="container_dados" >
+       <h5>Padre a hijo</h5>
+        <div class="dados">            
+            <app-dado [valor]="dado1"></app-dado>
+            <app-dado [valor]="dado2"></app-dado>
+            <app-dado [valor]="dado3"></app-dado>
+        </div>
+       
+            <button [disabled]="isDisabled()" mat-raised-button color="primary" (click)="tirar()">TIRAR</button>
+            <h5>{{mensaje()}}</h5> 
+    </div>
+  <div>
+<app-cronometro >    </app-cronometro>
+
+  </div>
+
+</main>

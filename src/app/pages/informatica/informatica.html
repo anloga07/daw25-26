@@ -1,0 +1,72 @@
+<main>
+<div class="container">
+  <header>
+    <h1>{{title}}</h1>
+    <p class="total-productos">Mostrando {{producto.length}} productos</p>
+  </header>
+  
+  <section class="catalogo">
+    @for (producto of producto; track producto.id) {
+      <article class="producto-item">
+        <div class="producto-imagen">
+          <img [src]="producto.imagen" [alt]="producto.nombre">
+          
+          @if (producto.stock === 0) {
+            <div class="agotado-overlay">AGOTADO</div>
+          }
+          
+          @if ($first) {
+            <span class="badge-destacado">DESTACADO</span>
+          }
+        </div>
+        
+        <div class="producto-info">
+          <span class="categoria">{{producto.categoria}}</span>
+          <h3>{{producto.nombre}}</h3>
+                             
+          <div class="producto-footer">
+            <p class="precio">{{producto.precio}}€</p>
+            
+            @if (producto.stock > 0) {
+              <p class="stock">Stock: {{producto.stock}}</p>
+            } @else {
+              <p class="sin-stock">Sin stock</p>
+            }
+          </div>
+          
+          <div class="producto-meta">
+            <small>
+              Posición: {{$index + 1}} de {{$count}}
+              @if ($even) {
+                <span class="par">PAR</span>
+              }
+              @if ($last) {
+                <span class="ultimo">ÚLTIMO</span>
+              }
+            </small>
+          </div>
+        </div>
+      </article>
+    } @empty {
+      <div class="sin-productos">
+        <h2>No hay productos disponibles</h2>
+        <p>Vuelve más tarde para ver nuestro catálogo</p>
+      </div>
+    }
+  </section>
+  
+   
+  <section class="ejemplo-vacio">
+    <h2>Ejemplo de lista vacía</h2>
+    @for (item of productosVacios; track $index) {
+      <p>{{item.nombre}}</p>
+    } @empty {
+      <div class="mensaje-vacio">
+        <p>Esta lista está vacía intencionalmente para demostrar empty</p>
+      </div>
+    }
+  </section>
+</div>
+
+
+</main>

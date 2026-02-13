@@ -1,0 +1,17 @@
+main{
+    display: flex;
+    height: 100vh;
+}
+
+.dados{
+    display: flex;
+   
+}
+
+.container_dados {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+background-color: aqua;
+}
